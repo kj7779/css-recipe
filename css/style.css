@@ -7,6 +7,9 @@ body {
   color: #2b2a27;
   font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
 }
+main {
+  margin-bottom: 20px;
+}
 img {
   max-width: 100%;
 }
@@ -15,6 +18,12 @@ ul {
 }
 a {
   color: #2b2a27;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* mainvisual */
@@ -53,10 +62,11 @@ a {
   display: flex;
   margin-bottom: 60px;
   padding: 0;
+  @media screen and (max-width: 834px) {
+    flex-direction: column;
+  }
 }
-@media screen and (max-width: 834px) {
-  flex-direction: column;
-}
+
 .flex li {
   width: calc(100% / 3);
   @media screen and (max-width: 834px) {
@@ -81,6 +91,7 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .sns li {

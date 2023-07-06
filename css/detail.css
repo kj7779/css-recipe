@@ -7,6 +7,9 @@ body {
   color: #2b2a27;
   font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
 }
+main {
+  margin-bottom: 20px;
+}
 img {
   max-width: 100%;
 }
@@ -20,24 +23,43 @@ a {
 dd {
   margin: auto;
 }
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 /* recipe */
 .flex {
   display: flex;
   margin-bottom: 60px;
+  @media screen and (max-width: 834px) {
+    flex-direction: column;
+    padding: 0 10px;
+  }
 }
 .flex .image {
   width: 50%;
+  @media screen and (max-width: 834px) {
+    width: 100%;
+  }
 }
 .flex .image img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   vertical-align: bottom;
+  @media screen and (max-width: 834px) {
+    height: auto;
+  }
 }
 .flex .recipe {
   width: 50%;
   padding: 40px 5% 0 5%;
+  @media screen and (max-width: 834px) {
+    width: 100%;
+    padding: 0;
+  }
 }
 .flex .recipe .page-title {
   font-size: 1.75rem;
@@ -90,6 +112,7 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .sns li {
